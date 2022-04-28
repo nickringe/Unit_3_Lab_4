@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+
+public class PasswordStorage {
+
+	public static Boolean addPassword (String a) {
+		ArrayList<String> passList = new ArrayList<>();
+		if (a.length() < 7 || a.length() > 12) {
+			System.out.println("Invalid entry. Password must contain between 7-12 characters.");
+		}
+		passList.add(a);
+		System.out.println(passList);
+		return false;
+	}
+	
+	
+	
+}

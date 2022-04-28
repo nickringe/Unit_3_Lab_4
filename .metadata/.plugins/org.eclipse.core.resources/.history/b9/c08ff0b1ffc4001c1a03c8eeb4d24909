@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class PasswordStorage {
+
+	public static Boolean addPassword (String a) {
+		Scanner scnr = new Scanner(System.in);
+		System.out.println("Enter a password that contains\n***Between 7-12 characters\n"
+				+ "***That doesn't already exist\n***That has at least one number (but not a 6)\n"
+				+ "***That does NOT contain any spaces\n***Contains at least 2 capital vowels\n"
+				+ "***Or is the word 'admin' or 'mod' :");
+		a = scnr.nextLine();
+		return false;
+	}
+	
+	
+	
+}

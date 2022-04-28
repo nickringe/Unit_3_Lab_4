@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+
+public class TDDPasswordPractice {
+
+	public static void passList(ArrayList<String> a, String b) {
+		if (b.equalsIgnoreCase(("admin")) || b.equalsIgnoreCase("mod")) {
+			a.add(b);
+		} else if (addPassword(b) == true && a.contains(b) == false) {
+			a.add(b);
+		} else {
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		ArrayList<String> newList = new ArrayList<>();
+
+		passList(newList, "PAsswOrd");
+		passList(newList, "1fjfjEIfjfj13");
+		passList(newList, "1sIxUh");
+		passList(newList, "123456AA");
+		passList(newList, "1pAss tEst");
+		passList(newList, "0abcdEfghI");
+		passList(newList, "0abcdEfghI");
+		passList(newList, "0abcdEfI");
+		passList(newList, "admin");
+		passList(newList, "mod");
+		passList(newList, "1PAsswOrd");
+		System.out.println(newList);
+
+	}
+
+	public static Boolean addPassword(String a) {
+		
+		for (int i = 0; i < a.length(); i++) {
+			if (a.contains("1") || a.contains("2")|| a.contains("3")|| a.contains("4")|| a.contains("5")|| a.contains("7")|| a.contains("8")|| a.contains("9")|| a.contains("0")) {
+				break;
+			} else {
+				System.out.println("Invalid entry. Password must contain at least one number.");
+				return false;
+			}
+		}
+		if (a.length() < 7 || a.length() > 12) {
+			System.out.println("Invalid entry. Password must contain between 7-12 characters.");
+			return false;
+		} else if (a.contains("6")) {
+			System.out.println("Invalid entry. Password must not contain the number 6.");
+			return false;
+		} else if (a.contains(" ")) {
+			System.out.println("Invalid entry. Password must not contain a space.");
+			return false;		
+		} else if ((a.contains("A") || a.contains("E") || a.contains("I") || a.contains("O") || a.contains("U") || a.contains("Y")) && (a.contains("A") || a.contains("E") || a.contains("I") || a.contains("O") || a.contains("U") || a.contains("Y" ))){
+			return true;
+		} else {
+			return true;
+		}
+	}
+
+}

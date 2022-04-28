@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public class PasswordStorage {
+
+	public static Boolean addPassword(String a) {
+		ArrayList<String> newList = new ArrayList<>();
+
+		if (a.length() < 7 || a.length() > 12) {
+			System.out.println("Invalid entry. Password must contain between 7-12 characters.");
+			return false;
+		} else if (a.contains("6")) {
+			System.out.println("Invalid entry. Password must not contain the number 6.");
+			return false;
+		} else if (a.contains(" ")) {
+			System.out.println("Invalid entry. Password must not contain a space.");
+			return false;
+		}
+
+		else {
+		newList.add(a);
+			return true;
+		}
+	}
+
+}

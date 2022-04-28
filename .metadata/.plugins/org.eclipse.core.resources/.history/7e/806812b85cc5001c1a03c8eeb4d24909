@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+
+public class TDDPasswordPractice {
+
+	public static void passList(ArrayList<String> a, String b) {
+		if (addPassword(b) == true) {
+			a.add(b);
+		}
+	}
+
+	public static void main(String[] args) {
+		ArrayList<String> newList = new ArrayList<>();
+
+		passList(newList, "1Password");
+		passList(newList, "1234567");
+		passList(newList, "1abcdefghI");
+		System.out.println(newList);
+
+	}
+
+	public static Boolean addPassword(String a) {
+		char[] upperVowels = {'A','E','I','O','U','Y'};
+		char[] numbers = {'1','2','3','4','5','7','8','9','0'};
+		for (int i = 0; i < a.length(); i++) {
+			if (a.contains("1") || a.contains("2")|| a.contains("3")|| a.contains("4")|| a.contains("5")|| a.contains("7")|| a.contains("8")|| a.contains("9")|| a.contains("0")) {
+//				System.out.println("Contains a number.");
+				break;
+			} else {
+				System.out.println("Error");
+				return false;
+			}
+		}
+		if (a.length() < 7 || a.length() > 12) {
+			System.out.println("Invalid entry. Password must contain between 7-12 characters.");
+			return false;
+		} else if (a.contains("6")) {
+			System.out.println("Invalid entry. Password must not contain the number 6.");
+			return false;
+		} else if (a.contains(" ")) {
+			System.out.println("Invalid entry. Password must not contain a space.");
+			return false;		
+		} else {
+			return true;
+		}
+	}
+
+}

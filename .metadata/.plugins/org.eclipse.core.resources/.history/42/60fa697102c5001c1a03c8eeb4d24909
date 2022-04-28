@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+
+public class PasswordStorage {
+
+	public static Boolean addPassword (String a) {
+		ArrayList<String> passList = new ArrayList<>();
+		passList.add(a);
+		System.out.println(passList);
+		return false;
+	}
+	
+	
+	
+}

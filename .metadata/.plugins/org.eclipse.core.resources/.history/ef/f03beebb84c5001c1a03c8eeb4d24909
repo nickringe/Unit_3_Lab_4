@@ -1,0 +1,18 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class TDDPasswordPracticeTest {
+
+//	@Test
+//	void testDuplicate() {
+//		ArrayList<String> expected = new ArrayList<>();
+//		expected.add("pAsswOrd1");
+//		ArrayList<String> actual = TDDPasswordPractice.passList(newList, "pAsswOrd1");
+//		assertEquals(expected, actual);
+		
+//	}
+
+}

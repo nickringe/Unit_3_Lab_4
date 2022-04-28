@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class PasswordStorage {
+
+	public static Boolean addPassword (String a) {
+		System.out.println("Getting there...");
+		return false;
+	}
+	
+	
+	
+}

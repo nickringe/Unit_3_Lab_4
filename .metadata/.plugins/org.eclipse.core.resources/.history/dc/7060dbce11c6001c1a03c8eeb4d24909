@@ -1,0 +1,51 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class TDDPasswordPracticeTest {
+
+	@Test
+	void testVowels1() {
+		boolean expected = true;
+		boolean actual = TDDPasswordPractice.addPassword("pAsswOrd1");		
+		assertEquals(expected, actual);
+			}
+	
+	@Test
+	void testVowels2() {
+		boolean expected = true;
+		boolean actual = TDDPasswordPractice.addPassword("pEsswYrd1");		
+		assertEquals(expected, actual);
+			}
+	@Test
+	void testSpace1() {
+		boolean expected = false;
+		boolean actual = TDDPasswordPractice.addPassword("pEss wYrd1");		
+		assertEquals(expected, actual);
+			}
+	
+	@Test
+	void testSpace2() {
+		boolean expected = true;
+		boolean actual = TDDPasswordPractice.addPassword("pEsswYrd1");		
+		assertEquals(expected, actual);
+			}
+	
+	
+//	@Test
+//	void testAdminMod1() {
+//		ArrayList<String> testList = new ArrayList<>();
+//		
+//		ArrayList<String> expected = new ArrayList<>();
+//		boolean actual = TDDPasswordPractice.addPassword("mod");		
+//		assertEquals(expected, actual);
+//			}
+//	@Test
+//	void testAdminMod2() {
+//		boolean expected = true;
+//		boolean actual = TDDPasswordPractice.addPassword("mod");		
+//		assertEquals(expected, actual);
+//			}
+}
